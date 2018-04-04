@@ -7,10 +7,17 @@ import time
 import random
 import re
 import requests
-import os.path
 import string
 from bs4 import BeautifulSoup
 from pandas.core.frame import  DataFrame
+
+##read movie_id list
+##file = open('/Applications/学习/Python/git_douban/douban/proxyList.json','r')
+##userList = json.load(file)
+
+##list_index =
+
+##user_id = list[index]
 
 user_id = 'aixiaoke'
 
@@ -98,4 +105,5 @@ for i in range(2,page_num+1):
     }
     HH_dataframe = DataFrame(current_dict)
     HH_dataframe.to_csv('/Applications/学习/Python/git_douban/data/people_inspect/AXK_people_inspect.csv')
+    # HH_dataframe.to_csv('/Applications/学习/Python/git_douban/data/people_inspect/'+str(list_index)'.csv')
     time.sleep(int(random.sample(range(0,5),1)[0]))

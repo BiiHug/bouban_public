@@ -7,11 +7,18 @@ import time
 import random
 import re
 import requests
-import os.path
 import string
 from bs4 import BeautifulSoup
 from pandas.core.frame import  DataFrame
 from collections import OrderedDict
+
+##read movie_id list
+##file = open('/Applications/学习/Python/git_douban/douban/proxyList.json','r')
+##movieList = json.load(file)
+
+##list_index =
+
+##movie_id = list[index]
 
 movie_id = 3530403
 
@@ -93,4 +100,5 @@ current_dict['poster'] = movie_image
 
 HH_dataframe = DataFrame(current_dict, index=[0])
 HH_dataframe.to_csv('/Applications/学习/Python/git_douban/data/movie_info/Yuntu_movie_info.csv')
+#HH_dataframe.to_csv('/Applications/学习/Python/git_douban/data/movie_info/'+str(list_index)'.csv')
 
