@@ -1,5 +1,6 @@
 # coding=utf-8
 
+# Make sure to install these models first
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -7,11 +8,10 @@ import time
 import random
 import re
 import requests
-import os.path
-import string
 from bs4 import BeautifulSoup
 from pandas.core.frame import  DataFrame
 
+#!!!!!IMPORTANT!!!!!!Put the movie_index here
 movie_index = 5045678
 
 Agent_list = [
@@ -125,4 +125,5 @@ for i in range(1,10+1):
         "user_movie": user_movie,
     }
     HH_dataframe = DataFrame(current_dict)
-    HH_dataframe.to_csv('/Applications/学习/Python/git_douban/data/comment_people/DYHT_comment_people.csv')
+    #Here should be your local location! Make sure to connect this location with github
+    HH_dataframe.to_csv('/Applications/学习/UWM/new479/douban_public/douban_public/data/get_people/'+str(movie_index)+'_comment_people.csv')
