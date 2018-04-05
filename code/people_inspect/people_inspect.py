@@ -19,7 +19,7 @@ from pandas.core.frame import  DataFrame
 
 ##user_id = list[index]
 
-user_id = 'aixiaoke'
+user_id = 'cancel'
 
 headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3346.8 Safari/537.36',
@@ -104,6 +104,6 @@ for i in range(2,page_num+1):
         "movie_comment": movie_comment_list,
     }
     HH_dataframe = DataFrame(current_dict)
-    HH_dataframe.to_csv('/Applications/学习/Python/git_douban/data/people_inspect/AXK_people_inspect.csv')
+    HH_dataframe.to_csv('/Applications/学习/UWM/new479/douban_public/douban_public/data/people_inspect/'+user_id+'_people_inspect.csv')
     # HH_dataframe.to_csv('/Applications/学习/Python/git_douban/data/people_inspect/'+str(list_index)'.csv')
-    time.sleep(int(random.sample(range(0,5),1)[0]))
+    time.sleep(int(random.sample(range(0,3),1)[0]))
